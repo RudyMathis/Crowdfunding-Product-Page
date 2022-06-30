@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 		<link rel="stylesheet" href="styles.css" />
+		<script src="main.js" defer></script>
 		<title>Frontend Mentor | Crowdfunding product page</title>
 	</head>
+
 	<body>
 		<header>
 			<img src="./images/logo.svg" alt="crowdfund logo" />
 			<section class="menu">
-				<img
-					src="./images/icon-hamburger.svg"
-					alt="menu button"
-          />
-          <!-- class="active hidden" -->	
-				<img
-					src="./images/icon-close-menu.svg"
-					alt="menu close button"
-          />
-          <!-- class="active hidden"-->
+				<img src="./images/icon-hamburger.svg" alt="menu button" />
+				<!-- class="active hidden" -->
+				<img class="close-menu" src="./images/icon-close-menu.svg" alt="menu close button" />
+				<!-- class="active hidden"-->
 			</section>
 			<section class="menu-list mobile desktop active hidden">
-				About Discover Get Started <!--medium font-->
+				About Discover Get Started
+				<!--medium font-->
 			</section>
 		</header>
 		<main>
 			<section class="card mastercraft-container">
-				<img
-					id="mastercraft"
-					src="./images/logo-mastercraft.svg"
-					alt="mastercraft logo"
-				/>
+				<img id="mastercraft" src="./images/logo-mastercraft.svg" alt="mastercraft logo" />
 				<h1>Mastercraft Bamboo Monitor Riser</h1>
 				<p>
 					A beautiful & handcrafted monitor stand to reduce neck and eye strain.
@@ -51,39 +38,42 @@
 					</button>
 					<button class="bookmark">
 						<!--toggle-->
-            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g>
-            </svg>
+						<svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd">
+								<circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+								<path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+							</g>
+						</svg>
 
-            <!-- change bookmark color with javascript -->
+						<!-- change bookmark color with javascript -->
 
-            <!-- <svg class="bookmark-icon-active" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd"><circle fill="var(--Moderate-Cyan)" cx="28" cy="28" r="28"/><path fill="var(--White)" d="M23 19v18l5-5.058L33 37V19z"/></g>
+						<!-- <svg class="bookmark-icon-active" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd"><circle fill="var(--Moderate-Cyan)" cx="28" cy="28" r="28"/><path fill="var(--White)" d="M23 19v18l5-5.058L33 37V19z"/></g>
             </svg> -->
 						<!-- <img class="bookmark-icon-active" src="./images/icon-bookmark.svg" alt="bookmark"  /> -->
-            <div class="bookmark-text bookmark-active desktop">
-              Bookmark
-            </div>
+						<div class="bookmark-text bookmark-active desktop">
+							Bookmark
+						</div>
 					</button>
 				</section>
 			</section>
 			<section class="card progress-container">
 				<div class="number">
 					<!--should change based on user amount input-->
-					$89,914
+					<h2>$89,914</h2>
 				</div>
 				<p>of $100,000 backed</p>
 				<hr />
 				<div class="number">
 					<!--Should go up plus 1 if user completes modal-->
-          <h2>5,007</h2>
-          <p>total backers</p>
+					<h2>5,007</h2>
+					<p>total backers</p>
 				</div>
-          <hr />
+				<hr />
 				<div class="number">
-          <h2>56</h2>
-          <p>days left</p>
-        </div>
+					<h2>56</h2>
+					<p>days left</p>
+				</div>
 				<section class="progress-bar">
 					<!--Should move based on money amount user inputs-->
 					<span class="progress"></p>
@@ -115,7 +105,7 @@
 					</p>
 					<div class="number">
 						<h2>101</h2>
-            <p>left</p>
+						<p>left</p>
 					</div>
 					<button class="reward project-modal">Select Reward</button>
 				</article>
@@ -130,9 +120,9 @@
 						included.
 					</p>
 					<div class="number">
-            <h2>64</h2>
-            <p> left </p>
-          </div>
+						<h2>64</h2>
+						<p> left </p>
+					</div>
 					<button class="reward project-modal">Select Reward</button>
 				</article>
 				<article class="mahogany disabled">
@@ -146,30 +136,28 @@
 						Shipping is included.
 					</p>
 					<div class="number">
-            <h2>0</h2>
-            <p> left </p>
-          </div>
+						<h2>0</h2>
+						<p> left </p>
+					</div>
 					<button disabled class="reward project-modal">Out of Stock</button>
 				</article>
 			</section>
 			<section class="card pledge-modal modal active hidden">
 				<!-- Selection modal start -->
 				<div class="back-this-project-container">
-					Back this project
-					<img src="./images/icon-close-modal.svg" alt="close modal" />
+					<h3>Back this project</h3>
+					<img class="close-modal" src="./images/icon-close-modal.svg" alt="close modal" />
 				</div>
 				<p>
 					Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
 					the world?
 				</p>
-				<article class="reward no-reward-modal">
-					<label class="reward-modal">
-						<input type="radio" checked="checked" class="radio" />
-						<span> 
-              <h3>
-                Pledge with no reward 
-              </h3> 
-            </span>
+				<article class="no-reward-modal">
+					<label class="reward-modal reward-label">
+						<input type="radio" class="radio" name="reward" />
+						<div class="text-container">
+							<h3>Pledge with no reward</h3>
+						</div>
 					</label>
 					<p>
 						Choose to support us without a reward if you simply believe in our
@@ -177,118 +165,104 @@
 						updates via email.
 					</p>
 				</article>
-				<article class="reward bamboo-modal">
-          <label class="reward-label">
-            <input type="radio" checked="checked" class="radio" />
-            <div class="text-container">
-              <h3>
-                Bamboo Stand 
-              </h3>
-              <p class="cyan">
-                Pledge $25 or more 
-              </p>
-            </div>
-          </label>
-          <p>
-            You get an ergonomic stand made of
-            natural bamboo. You've helped us launch our promotional campaign, and
-            you’ll be added to a special Backer member list. 
-          </p>
-          <div class="number">
-            <h2>101</h2>
-            <p>left</p>
+				<article class="bamboo-modal">
+					<label class="reward-label">
+						<input type="radio" class="radio" name="reward" />
+						<div class="text-container">
+							<h3>Bamboo Stand</h3>
+							<p class="cyan">Pledge $25 or more</p>
+						</div>
+					</label>
+					<p>
+						You get an ergonomic stand made of
+						natural bamboo. You've helped us launch our promotional campaign, and
+						you’ll be added to a special Backer member list.
+					</p>
+					<div class="number">
+						<h2>101</h2>
+						<p>left</p>
 					</div>
-          <!-- Selected pledge start -->
-          <hr>
-          <section class="enter-pledge">
-            <p>Enter your pledge</p>
-            <input type="number" name="pledge" class="pledge-input-amount" />
-            $25
-            <button class="reward continue">Continue</button>
-          </section>
-        </article>
+					<!-- Selected pledge start -->
+					<section class="enter-pledge hidden">
+						<hr>
+						<p>Enter your pledge</p>
+						<input type="number" name="pledge" class="pledge-input-amount" placeholder="$25" />
+						<button class="reward continue">Continue</button>
+					</section>
+				</article>
 				<!-- Selected pledge end -->
-        <article class="reward black-edition-modal">
-          <label class="reward-label">
-            <input type="radio" checked="checked" class="radio" />
-            <div class="text-container">
-              <h3>
-                Black Edition Stand 
-              </h3>
-              <p class="cyan">
-                Pledge $75 or more 
-              </p>
-            </div>
-          </label>
-          <p>
-            You get a Black Special Edition
-            computer stand and a personal thank you. You’ll be added to our Backer
-            member list. Shipping is included. 
-          </p>
-          <div class="number">
-            <h2>64</h2>
-            <p> left </p>
+				<article class="black-edition-modal">
+					<label class="reward-label">
+						<input type="radio" class="radio" name="reward" />
+						<div class="text-container">
+							<h3>Black Edition Stand</h3>
+							<p class="cyan">Pledge $75 or more</p>
+						</div>
+					</label>
+					<p>
+						You get a Black Special Edition
+						computer stand and a personal thank you. You’ll be added to our Backer
+						member list. Shipping is included.
+					</p>
+					<div class="number">
+						<h2>64</h2>
+						<p>left</p>
 					</div>
-          <!-- Selected pledge start -->
-          <hr>
-          <section class="enter-pledge active hidden">
-            <p>Enter your pledge</p>
-            <input type="number" name="pledge" class="pledge-input-amount" />
-            $75
-            <button class="reward continue">Continue</button>
-          </section>
-        </article>
+					<!-- Selected pledge start -->
+					<section class="enter-pledge active hidden">
+						<hr>
+						<p>Enter your pledge</p>
+						<input type="number" name="pledge" class="pledge-input-amount" placeholder="$75" />
+						<button class="reward continue">Continue</button>
+					</section>
+				</article>
 				<!-- Selected pledge end -->
-        <article class="reward mahogany-modal disabled">
-          <label class="reward-label">
-            <input type="radio" checked="checked" class="radio" />
-            <div class="text-container">
-              <h3>
-                Mahogany Special Edition Pledge
-              </h3>
-              <p class="cyan">
-                Pledge $200 or more 
-              </p>
-            </div>
-          </label>
-          <p>
-            You get two Special Edition
-            Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be
-            added to our Backer member list. Shipping is included. 
-          </p>
-          <div class="number">
-            <h2>0</h2>
-            <p> left </p>
+				<article class="mahogany-modal disabled">
+					<label class="reward-label">
+						<input type="radio" class="radio" disabled />
+						<div class="text-container">
+							<h3>Mahogany Special Edition Pledge</h3>
+							<p class="cyan">Pledge $200 or more</p>
+						</div>
+					</label>
+					<p>
+						You get two Special Edition
+						Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be
+						added to our Backer member list. Shipping is included.
+					</p>
+					<div class="number">
+						<h2>0</h2>
+						<p>left</p>
 					</div>
-          <!-- Selected pledge  start -->
-          <section class="enter-pledge">
-            <p>Enter your pledge</p>
-            <input type="number" name="pledge" class="pledge-input-amount" />
-            $200
-            <button class="reward continue">Continue</button>
-          </section>
-        </article>
-			<!-- Selected pledge end -->
+					<!-- Selected pledge  start -->
+					<section class="enter-pledge hidden">
+						<p>Enter your pledge</p>
+						<input type="number" name="pledge" class="pledge-input-amount" placeholder="$200" />
+						<button class="reward continue">Continue</button>
+					</section>
+				</article>
+				<!-- Selected pledge end -->
 
-			<!-- Selection modal end -->
+				<!-- Selection modal end -->
 
-			<!-- Success modal start -->
+				<!-- Success modal start -->
 
-      <section class="card thank-you active hidden">
-        <img src="./images/icon-check.svg" alt=" Thank You!">
-        <h3>
-          Thanks for your support! 
-        </h3>
-        <p>
-          Your pledge brings us one step closer to sharing
-          Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our
-          campaign is completed. 
-        </p>
-        <button class="reward thank-you">
-          Got it!
-        </button>
-        </section>
-			<!-- Success modal end -->
+				<section class="card thank-you active hidden">
+					<img src="./images/icon-check.svg" alt=" Thank You!">
+					<h3>
+						Thanks for your support!
+					</h3>
+					<p>
+						Your pledge brings us one step closer to sharing
+						Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our
+						campaign is completed.
+					</p>
+					<button class="reward thank-you">
+						Got it!
+					</button>
+				</section>
+				<!-- Success modal end -->
 		</main>
 	</body>
+
 </html>
