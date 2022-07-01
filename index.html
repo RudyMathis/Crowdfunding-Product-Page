@@ -154,7 +154,7 @@
 				</p>
 				<article class="no-reward-modal">
 					<label class="reward-modal reward-label">
-						<input type="radio" class="radio" name="reward" />
+						<input type="radio" class="radio" name="reward" id="no-reward" />
 						<div class="text-container">
 							<h3>Pledge with no reward</h3>
 						</div>
@@ -164,10 +164,20 @@
 						project. As a backer, you will be signed up to receive product
 						updates via email.
 					</p>
+					<div class="number"></div>
+					<!-- Selected pledge start -->
+					<section class="enter-pledge hidden">
+						<hr>
+						<p>Enter your pledge</p>
+						<input type="number" name="pledge" class="pledge-input-amount" min="0" max="9999" placeholder="$0" />
+						<button class="reward continue">Continue</button>
+					</section>
+					<!-- Selected pledge end -->
+				</article>
 				</article>
 				<article class="bamboo-modal">
 					<label class="reward-label">
-						<input type="radio" class="radio" name="reward" />
+						<input type="radio" class="radio" name="reward" id="bamboo" />
 						<div class="text-container">
 							<h3>Bamboo Stand</h3>
 							<p class="cyan">Pledge $25 or more</p>
@@ -186,14 +196,14 @@
 					<section class="enter-pledge hidden">
 						<hr>
 						<p>Enter your pledge</p>
-						<input type="number" name="pledge" class="pledge-input-amount" placeholder="$25" />
+						<input type="number" name="pledge" class="pledge-input-amount" min="25" max="9999" placeholder="$25" />
 						<button class="reward continue">Continue</button>
 					</section>
 				</article>
 				<!-- Selected pledge end -->
 				<article class="black-edition-modal">
 					<label class="reward-label">
-						<input type="radio" class="radio" name="reward" />
+						<input type="radio" class="radio" name="reward" id="black-edition" />
 						<div class="text-container">
 							<h3>Black Edition Stand</h3>
 							<p class="cyan">Pledge $75 or more</p>
@@ -209,10 +219,10 @@
 						<p>left</p>
 					</div>
 					<!-- Selected pledge start -->
-					<section class="enter-pledge active hidden">
+					<section class="enter-pledge hidden">
 						<hr>
 						<p>Enter your pledge</p>
-						<input type="number" name="pledge" class="pledge-input-amount" placeholder="$75" />
+						<input type="number" name="pledge" class="pledge-input-amount" min="75" max="9999" placeholder="$75" />
 						<button class="reward continue">Continue</button>
 					</section>
 				</article>
@@ -237,7 +247,7 @@
 					<!-- Selected pledge  start -->
 					<section class="enter-pledge hidden">
 						<p>Enter your pledge</p>
-						<input type="number" name="pledge" class="pledge-input-amount" placeholder="$200" />
+						<input type="number" name="pledge" class="pledge-input-amount" min="200" max="9999" placeholder="$200" />
 						<button class="reward continue">Continue</button>
 					</section>
 				</article>

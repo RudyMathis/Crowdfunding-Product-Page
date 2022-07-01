@@ -37,6 +37,7 @@ The designs were created to the following widths:
 
     --Black: hsl(0, 0%, 0%);
     --Dark-Grey: hsl(0, 0%, 48%);
+    --Light-Grey: hsl(0, 0%, 85%);
     --White: hsl(0, 0%, 100%);
 
     --Normal: 400;
@@ -222,7 +223,7 @@ main{
 }
 
 hr{
-    color: var(--Dark-Grey);
+    color: var(--Light-Grey);
     width: 25%;
     margin: auto;
 }
@@ -245,7 +246,7 @@ hr{
 /* article cards */
 
 article{
-    border: 1px solid var(--Dark-Grey);
+    border: 1px solid var(--Light-Grey);
     border-radius: .75em;
     margin: 1em 0;
     padding: 2em 1em;
@@ -296,8 +297,36 @@ article hr{
 
 .radio{
     cursor: pointer;
-    /* accent-color: var(--Moderate-Cyan); */
-    accent-color: hsl(176, 50%, 47%);
+    accent-color: var(--Moderate-Cyan);
+}
+
+.enter-pledge{
+    text-align: center;
+}
+
+.enter-pledge.active{
+    display: block;
+}
+
+.pledge-input-amount{
+    font-weight: var(--Bold);
+    color: var(--Black);
+    padding: 1em;
+    text-align: center;
+    border: 2px solid var(--Light-Grey);
+    border-radius: 99px;
+}
+
+.pledge-cyan{
+    border: 2px solid var(--Moderate-Cyan);
+}
+
+.pledge-input-amount::placeholder{
+    color: var(--Black);
+}
+
+.input-container{
+    /*  */
 }
 /* thank you modal */
 
