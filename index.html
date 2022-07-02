@@ -14,14 +14,17 @@
 		<header>
 			<img src="./images/logo.svg" alt="crowdfund logo" />
 			<section class="menu">
-				<img src="./images/icon-hamburger.svg" alt="menu button" />
+				<img class="menu-open" src="./images/icon-hamburger.svg" alt="menu button" />
 				<!-- class="active hidden" -->
-				<img class="close-menu" src="./images/icon-close-menu.svg" alt="menu close button" />
+				<img class="menu-close hidden" src="./images/icon-close-menu.svg" alt="menu close button" />
 				<!-- class="active hidden"-->
 			</section>
-			<section class="menu-list mobile desktop active hidden">
-				About Discover Get Started
-				<!--medium font-->
+			<section class="menu-list hidden">
+				<h4>About</h4>
+				<hr>
+				<h4>Discover</h4>
+				<hr>
+				<h4>Get Started</h4>
 			</section>
 		</header>
 		<main>
@@ -45,7 +48,7 @@
 								<path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
 							</g>
 						</svg>
-						<div class="bookmark-text bookmark-active desktop">
+						<div class="bookmark-text desktop">
 							Bookmark
 						</div>
 					</button>
@@ -70,7 +73,7 @@
 				</div>
 				<section class="progress-bar">
 					<!--Should move based on money amount user inputs-->
-					<span class="progress"></p>
+					<div class="progress"></div>
 				</section>
 			</section>
 			<section class="card about-container">
@@ -190,7 +193,7 @@
 					<section class="enter-pledge hidden">
 						<hr>
 						<p>Enter your pledge</p>
-						<input type="number" name="pledge" class="pledge-input-amount" min="25" max="9999" placeholder="$25" />
+						<input type="number" name="pledge" class="pledge-input-amount" min="25" max="9999" placeholder= "$25" />
 						<button class="reward continue">Continue</button>
 					</section>
 				</article>

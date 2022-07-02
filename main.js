@@ -1,3 +1,28 @@
+// menu
+const menuOpen = document.querySelector(".menu-open");
+const menuClose = document.querySelector(".menu-close");
+const menuList = document.querySelector(".menu-list");
+
+
+// not happy try rest parameter/spread syntax
+// want to click outside menu to close it
+menuOpen.addEventListener("click",()=>{
+    toggle(menuOpen);
+    toggle(menuClose);
+    toggle(menuList);
+});
+
+menuClose.addEventListener("click",()=>{
+    toggle(menuOpen);
+    toggle(menuClose);
+    toggle(menuList);
+});
+
+function toggle(element){
+    element.classList.toggle("hidden")
+} 
+
+
 // back this modal prompt
 const backThisProject = document.querySelector(".back-this-project");
 
@@ -17,6 +42,11 @@ thankYouBtn.addEventListener("click", ()=>{
     thankYou.classList.add("hidden");
     
     backerNumber.innerHTML = new Intl.NumberFormat().format(++count);
+    
+    // let updatedMoney = moneyBacked.innerHTML
+    // console.log(updatedMoney)
+    
+
 });
 
 // close modal and reset
@@ -68,19 +98,29 @@ function resetModal(){
 // pledge input
 const pledgeInput = document.querySelectorAll(".pledge-input-amount");
 const moneyBacked = document.querySelector(".money-backed");
+const progress = document.querySelector(".progress");
 
 pledgeInput.forEach((input)=>{
     input.addEventListener("input", ()=>{
-        let givenNumber = parseInt(89914);
+        let givenNumber = 89914;
         internationalNumberFormat = new Intl.NumberFormat('en-US');
 
         moneyBacked.innerHTML = `\$${internationalNumberFormat.format(givenNumber + parseInt(input.value))}`
 
+        progress.style.width = `${(givenNumber + parseInt(input.value)) / 1000}\%`
+
+        // moneyBacked.innerHTML = `\$${internationalNumberFormat.format(givenNumber + parseInt(input.value))}`
+        // console.log(money)
+        // let money = moneyBacked.innerHTML
+        // let number = Number(money.replace(/[^0-9.-]+/g,""))
+    
+        
+        // input.setAttribute("value", number)
+        // moneyBacked.innerHTML = input.value
 
         if(moneyBacked.innerHTML == "$NaN"){
             moneyBacked.innerHTML = "$89,914"
         }
-        
     })
 })
 
@@ -95,3 +135,4 @@ bookmark.addEventListener("click", ()=>{
     path.classList.toggle("path");
 
 })
+

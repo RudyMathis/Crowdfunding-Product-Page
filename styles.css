@@ -72,7 +72,7 @@ The designs were created to the following widths:
 
 button:disabled {
     background: var(--Dark-Grey);
-  }
+}
 
 p{
     color: var(--Dark-Grey);
@@ -97,6 +97,18 @@ h2{
 h3{
     /*  */
 }
+h3:hover,
+h3.focus {
+    cursor: pointer;
+    color: var(--Moderate-Cyan);
+}
+
+h4{
+    font-weight: var(--Medium);
+    margin: 1rem;
+    cursor: pointer;
+}
+
 
 button{
     color: var(--White);
@@ -130,6 +142,10 @@ body{
     box-shadow: 0px 0px 100em 100em hsla(0, 0%, 0%, 0.5);
 }
 
+.thank-you.modal {
+    position: fixed;
+}
+
 
 /* header */
 
@@ -137,6 +153,29 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.menu{
+    position: relative;
+}
+
+.menu-list{
+    position: absolute;
+    z-index: 3;
+    /* cursor: pointer; */
+    box-shadow: 0px 20em 15em 10em hsla(0, 0%, 0%, 0.35);
+    top: 4em;
+    width: calc(100% - 2em);
+    background-color: var(--White);
+    border-radius: .5em;
+    /* padding: 1em; */
+}
+
+.menu-list hr {
+    height: 1px;
+    background-color: var(--Light-Grey);
+    border: none;
+    width: 100%;
 }
 
 /* main */
@@ -235,11 +274,19 @@ hr{
 }
 
 .progress-bar{
-    /*  */
+    border: 1px solid var(--Light-Grey);
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 99px;
+    width: 100%;
+    height: 1em;
 }
 
 .progress{
-    /*  */
+    background-color: var(--Moderate-Cyan);
+    border-radius: 99px;
+    height: 100%;
+    width: 89.9%;
+    max-width: 100%;
 }
 
 /* about this project */
