@@ -196,14 +196,20 @@ main{
     padding: 1em;
 }
 
-.bookmark-icon-active{
-    /*  */
-}
-
 .bookmark-active{
     fill: var(--Moderate-Cyan);
     color:  var(--Moderate-Cyan);
 }
+
+.circle{
+    fill: var(--Moderate-Cyan);
+
+}
+
+.path{
+    fill: var(--White);
+}
+
 
 /* progress card */
 .progress-container{
