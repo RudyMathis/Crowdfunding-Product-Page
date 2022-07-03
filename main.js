@@ -42,10 +42,6 @@ thankYouBtn.addEventListener("click", ()=>{
     thankYou.classList.add("hidden");
     
     backerNumber.innerHTML = new Intl.NumberFormat().format(++count);
-    
-    // let updatedMoney = moneyBacked.innerHTML
-    // console.log(updatedMoney)
-    
 
 });
 
@@ -84,7 +80,15 @@ continueBtn.forEach((btn)=>{
         pledgeModal.classList.add("hidden");
         thankYou.style.display = "flex";
         thankYou.classList.remove("hidden");
-})});
+
+        internationalNumberFormat = new Intl.NumberFormat('en-US');
+        if(!btn.previousElementSibling.value){
+            moneyBacked.innerHTML = `\$${internationalNumberFormat.format(parseInt(moneyBacked.innerHTML.replace(/\$|,/g, '')) + parseInt(btn.previousElementSibling.placeholder.replace(/\$|,/g, '')))}`
+        } else {
+            btn.previousElementSibling.value = ''
+        }
+
+    })});
 
 // function to reset modal
 function resetModal(){
@@ -102,21 +106,11 @@ const progress = document.querySelector(".progress");
 
 pledgeInput.forEach((input)=>{
     input.addEventListener("input", ()=>{
-        let givenNumber = 89914;
         internationalNumberFormat = new Intl.NumberFormat('en-US');
 
-        moneyBacked.innerHTML = `\$${internationalNumberFormat.format(givenNumber + parseInt(input.value))}`
+        moneyBacked.innerHTML = `\$${internationalNumberFormat.format(parseInt(moneyBacked.innerHTML.replace(/\$|,/g, '')) + parseInt(input.value))}`
 
-        progress.style.width = `${(givenNumber + parseInt(input.value)) / 1000}\%`
-
-        // moneyBacked.innerHTML = `\$${internationalNumberFormat.format(givenNumber + parseInt(input.value))}`
-        // console.log(money)
-        // let money = moneyBacked.innerHTML
-        // let number = Number(money.replace(/[^0-9.-]+/g,""))
-    
-        
-        // input.setAttribute("value", number)
-        // moneyBacked.innerHTML = input.value
+        progress.style.width = `${(parseInt(moneyBacked.innerHTML.replace(/\$|,/g, '')) + parseInt(input.value)) / 1000}\%`
 
         if(moneyBacked.innerHTML == "$NaN"){
             moneyBacked.innerHTML = "$89,914"
