@@ -26,6 +26,11 @@
 				<hr>
 				<h4>Get Started</h4>
 			</section>
+			<section class="menu-list-desktop hidden">
+				<h4>About</h4>
+				<h4>Discover</h4>
+				<h4>Get Started</h4>
+			</section>
 		</header>
 		<main>
 			<section class="card mastercraft-container">
@@ -39,7 +44,6 @@
 						<!--opens modal-->
 						Back this project
 					</button>
-					<!--toggle-->
 					<!-- change bookmark color with javascript -->
 					<button class="bookmark">
 						<svg  width="56" height="56" xmlns="http://www.w3.org/2000/svg">
@@ -55,22 +59,23 @@
 				</section>
 			</section>
 			<section class="card progress-container">
-				<div class="number">
-					<!--should change based on user amount input-->
-					<h2 class="money-backed">$89,914</h2>
-				</div>
-				<p>of $100,000 backed</p>
-				<hr />
-				<div class="number">
-					<!--Should go up plus 1 if user completes modal-->
-					<h2 class="backer-number">5,007</h2>
-					<p>total backers</p>
-				</div>
-				<hr />
-				<div class="number">
-					<h2 >56</h2>
-					<p>days left</p>
-				</div>
+				<section class="number-container">
+					<div class="number">
+						<!--should change based on user amount input-->
+						<h2 class="money-backed">$89,914</h2>
+						<p>of $100,000 backed</p>
+					</div>
+					<hr />
+					<div class="number">
+						<h2 class="backer-number">5,007</h2>
+						<p>total backers</p>
+					</div>
+					<hr />
+					<div class="number">
+						<h2>56</h2>
+						<p>days left</p>
+					</div>
+				</section>
 				<section class="progress-bar">
 					<!--Should move based on money amount user inputs-->
 					<div class="progress"></div>
@@ -100,11 +105,13 @@
 						launch our promotional campaign, and you’ll be added to a special
 						Backer member list.
 					</p>
-					<div class="number">
-						<h2>101</h2>
-						<p>left</p>
+					<div class="pledge-number">
+						<div class="pledge-number-container">
+							<h2>101</h2>
+							<p>left</p>
+						</div>
+						<button class="reward project-modal back-this-project" >Select Reward</button>
 					</div>
-					<button class="reward project-modal">Select Reward</button>
 				</article>
 				<article class="black-edition">
 					<div class="text-container">
@@ -116,11 +123,13 @@
 						you. You’ll be added to our Backer member list. Shipping is
 						included.
 					</p>
-					<div class="number">
-						<h2>64</h2>
-						<p> left </p>
+					<div class="pledge-number">
+						<div class="pledge-number-container">
+							<h2>64</h2>
+							<p> left </p>
+						</div>
+						<button class="reward project-modal back-this-project">Select Reward</button>
 					</div>
-					<button class="reward project-modal">Select Reward</button>
 				</article>
 				<article class="mahogany disabled">
 					<div class="text-container">
@@ -132,17 +141,19 @@
 						personal thank you. You’ll be added to our Backer member list.
 						Shipping is included.
 					</p>
-					<div class="number">
-						<h2>0</h2>
-						<p> left </p>
+					<div class="pledge-number">
+						<div class="pledge-number-container">
+							<h2>0</h2>
+							<p> left </p>
+						</div>
+						<button disabled class="reward project-modal">Out of Stock</button>
 					</div>
-					<button disabled class="reward project-modal">Out of Stock</button>
 				</article>
 			</section>
 			<section class="card pledge-modal modal active hidden">
 				<!-- Selection modal start -->
 				<div class="back-this-project-container">
-					<h3>Back this project</h3>
+					<h3 cl>Back this project</h3>
 					<img class="close-modal" src="./images/icon-close-modal.svg" alt="close modal" />
 				</div>
 				<p>
@@ -179,13 +190,17 @@
 							<h3>Bamboo Stand</h3>
 							<p class="cyan">Pledge $25 or more</p>
 						</div>
+						<div class="pledge-number desktop">
+							<h2>101</h2>
+							<p>left</p>
+						</div>
 					</label>
 					<p>
 						You get an ergonomic stand made of
 						natural bamboo. You've helped us launch our promotional campaign, and
 						you’ll be added to a special Backer member list.
 					</p>
-					<div class="number">
+					<div class="pledge-number mobile">
 						<h2>101</h2>
 						<p>left</p>
 					</div>
@@ -205,13 +220,17 @@
 							<h3>Black Edition Stand</h3>
 							<p class="cyan">Pledge $75 or more</p>
 						</div>
+						<div class="pledge-number desktop">
+							<h2>64</h2>
+							<p>left</p>
+						</div>
 					</label>
 					<p>
 						You get a Black Special Edition
 						computer stand and a personal thank you. You’ll be added to our Backer
 						member list. Shipping is included.
 					</p>
-					<div class="number">
+					<div class="pledge-number mobile">
 						<h2>64</h2>
 						<p>left</p>
 					</div>
@@ -231,13 +250,17 @@
 							<h3>Mahogany Special Edition Pledge</h3>
 							<p class="cyan">Pledge $200 or more</p>
 						</div>
+						<div class="pledge-number desktop">
+							<h2>0</h2>
+							<p>left</p>
+						</div>
 					</label>
 					<p>
 						You get two Special Edition
 						Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be
 						added to our Backer member list. Shipping is included.
 					</p>
-					<div class="number">
+					<div class="pledge-number mobile">
 						<h2>0</h2>
 						<p>left</p>
 					</div>

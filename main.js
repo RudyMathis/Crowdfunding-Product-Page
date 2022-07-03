@@ -24,11 +24,13 @@ function toggle(element){
 
 
 // back this modal prompt
-const backThisProject = document.querySelector(".back-this-project");
+const backThisProject = document.querySelectorAll(".back-this-project");
+backThisProject.forEach((btn)=>{
+    btn.addEventListener("click", ()=>{
+        pledgeModal.classList.remove("hidden");
+    })
+})
 
-backThisProject.addEventListener("click", ()=>{
-    pledgeModal.classList.remove("hidden");
-});
 
 // thank you prompt
 const thankYou = document.querySelector(".thank-you");
@@ -42,7 +44,6 @@ thankYouBtn.addEventListener("click", ()=>{
     thankYou.classList.add("hidden");
     
     backerNumber.innerHTML = new Intl.NumberFormat().format(++count);
-
 });
 
 // close modal and reset
@@ -87,8 +88,9 @@ continueBtn.forEach((btn)=>{
         } else {
             btn.previousElementSibling.value = ''
         }
+    })
+});
 
-    })});
 
 // function to reset modal
 function resetModal(){
@@ -105,11 +107,11 @@ const moneyBacked = document.querySelector(".money-backed");
 const progress = document.querySelector(".progress");
 
 pledgeInput.forEach((input)=>{
-    input.addEventListener("input", ()=>{
+    // changing event listener from input to change solved the input issue of adding all inputs as appose to the last number before change state
+    input.addEventListener("change", ()=>{
         internationalNumberFormat = new Intl.NumberFormat('en-US');
 
         moneyBacked.innerHTML = `\$${internationalNumberFormat.format(parseInt(moneyBacked.innerHTML.replace(/\$|,/g, '')) + parseInt(input.value))}`
-
         progress.style.width = `${(parseInt(moneyBacked.innerHTML.replace(/\$|,/g, '')) + parseInt(input.value)) / 1000}\%`
 
         if(moneyBacked.innerHTML == "$NaN"){
@@ -130,3 +132,11 @@ bookmark.addEventListener("click", ()=>{
 
 })
 
+// desktop features
+const menuDesktop = document.querySelector(".menu-list-desktop");
+
+if(screen.width >= 768){
+    menuOpen.classList.add("hidden");
+    menuClose.classList.add("hidden");
+    menuDesktop.classList.remove("hidden");
+} 

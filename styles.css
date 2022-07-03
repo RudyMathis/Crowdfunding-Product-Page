@@ -27,6 +27,10 @@
     display: none;
 }
 
+.pledge-numbers.desktop{
+    display: none;
+}
+
 .desktop{
     display: none;
 }
@@ -222,9 +226,21 @@ main{
     margin: .5rem 0 2rem 0;
 }
 
-.progress-container > .number{
+.progress-container .number{
     display: flex;
     flex-direction: column;
+}
+
+.pledge-number-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pledge-number{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 hr{
@@ -273,7 +289,7 @@ article{
 
 .number{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin: 1rem 0;
 }
@@ -345,3 +361,86 @@ article hr{
 
 
 /* media */
+
+@media (min-width:768px){
+
+    .desktop{
+        display: flex;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    body{
+        background-image: url(./images/image-hero-desktop.jpg); /* mobile*/
+    }
+
+    main{
+        max-width: 45em;
+        margin: auto;
+    }
+
+    .menu-list-desktop{
+        display: flex;
+        align-items: center;
+        color: var(--White);
+    }
+
+    .button-container{
+        justify-content: space-around;
+    }
+
+    .number-container{
+        display: flex;
+        align-items: center;
+    }
+
+    hr{
+        border-left: 1px solid var(--Light-Grey);
+        height: 3em;
+        width: 0px;
+        margin: 0 4em;
+    }
+
+    .text-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .pledge-number{
+        justify-content: space-between;
+    }
+
+    .pledge-number.pledge-desktop{
+        justify-content: end;
+    }
+
+    .pledge-number-container{
+        display: flex;
+    }
+
+    .card{
+        width: 45em;
+        margin: 1em 0;
+        padding: 2em 2em;
+    }
+    
+    .enter-pledge{
+        text-align: center;
+    }
+    
+    .enter-pledge.active{
+        /* display: block; */
+        display: flex;
+    }
+
+    .reward-label{
+        display: flex;
+        align-items: center;
+        justify-content: initial;
+    }
+
+}
