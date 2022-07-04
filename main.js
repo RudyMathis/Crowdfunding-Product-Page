@@ -134,9 +134,22 @@ bookmark.addEventListener("click", ()=>{
 
 // desktop features
 const menuDesktop = document.querySelector(".menu-list-desktop");
-
+const bookmarkText = document.querySelector(".bookmark-text")
 if(screen.width >= 768){
     menuOpen.classList.add("hidden");
     menuClose.classList.add("hidden");
     menuDesktop.classList.remove("hidden");
+    bookmark.addEventListener("click", ()=>{
+
+        if(bookmarkText.innerHTML === "Bookmark" ){
+            bookmarkText.innerHTML = "Bookmarked"
+            bookmarkText.style.color = "var(--Moderate-Cyan)"
+        } else {
+            bookmarkText.innerHTML = "Bookmark" 
+            bookmarkText.style.color = "var(--Dark-Grey)"
+        }
+    })
 } 
+// if(bookmarkText.innerHTML = "Bookmarked"){
+//     bookmarkText.innerHTML = "Bookmark"
+// } 
